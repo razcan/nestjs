@@ -1,6 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { EmployeeService } from './employee.service';
 import { Employee } from './employee.model';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-root',
@@ -8,17 +12,20 @@ import { Employee } from './employee.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+
+  val: string = ''; 
+  firstName: string = "Yallaling";
   title = 'employee';
   message = '';
-  test = 'im super man';
   allEmployees: Array<Employee> = [];
+  allEmployees2: Array<Employee> = [];
 
-  constructor(private employeeService: EmployeeService) { }
+  constructor(private employeeService: EmployeeService, private httpClient:HttpClient) { }
 
   ngOnInit() {
     this.getAllEmployees();
   }
-
 
   private getAllEmployees() {
     this.employeeService.getAllEmployees().subscribe(allEmployeyes => {
@@ -27,5 +34,12 @@ export class AppComponent {
     });
   }
 
-  
+  getAllEmployeesfilters(val:any) {
+    this.employeeService.getAllEmployeesfilter(val).subscribe(allEmployees2 => {
+      this.allEmployees2 = allEmployees2;
+      // console.log(this.val);
+    });
+  }
+
+
 }

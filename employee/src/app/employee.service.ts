@@ -17,4 +17,13 @@ export class EmployeeService {
     return this.httpClient.get<Array<any>>(this.url);
   }
 
+  allEmployees2:any= [];
+  url2: any =[];
+ 
+  getAllEmployeesfilter(val:any): Observable<Array<any>>{
+    this.url2 = 'http://127.0.0.1:9999/employee/angajatdif/'+val;
+    this.allEmployees2 = this.httpClient.get<Array<any>>(this.url2);
+    return this.allEmployees2;
+  }
+
 }

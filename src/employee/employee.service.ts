@@ -52,6 +52,9 @@ export class EmployeeService {
     return firstUser;
   }
 
+//connection.manager.query('CALL sp_someStoredProc(?, ?)', [user.id, user.something])
+//CALL `api_local`.`GetAllEmployee`(1);
+
   async remove(id: string): Promise<void> {
     await this.EmployeesRepository.delete(id);
   }
