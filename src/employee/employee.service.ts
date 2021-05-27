@@ -55,7 +55,13 @@ export class EmployeeService {
 //connection.manager.query('CALL sp_someStoredProc(?, ?)', [user.id, user.something])
 //CALL `api_local`.`GetAllEmployee`(1);
 
-  async remove(id: string): Promise<void> {
+  async deleteById(id: string): Promise<void> {
     await this.EmployeesRepository.delete(id);
   }
+
+  async call_procedure(id: string): Promise<void> {
+    //return await this.EmployeesRepository.query("SELECT firstName FROM api_local.employee where employee.id = "+id);
+     return await this.EmployeesRepository.query("CALL api_local.GetAllEmployee("+id+");");
+  }
+
 }
