@@ -1,0 +1,9 @@
++ latest@0.2.0
++ primeng@12.0.0-rc.1
+added 204 packages from 486 contributors and audited 1237 packages in 11.43s
+
+81 packages are looking for funding
+  run `npm fund` for details
+
+found 170 vulnerabilities (18 low, 129 moderate, 23 high)
+  run `npm audit fix` to fix them, or `npm audit` for details

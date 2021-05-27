@@ -1,17 +1,25 @@
 import { Component, Input } from '@angular/core';
 import { EmployeeService } from './employee.service';
 import { Employee } from './employee.model';
-import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import {MenuItem} from 'primeng/api';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
+  // "styles": [
+  //   "./node_modules/primeng/resources/themes/saga-blue/theme.css",
+  //   "./node_modules/primeng/resources/primeng.min.css",
+  //   "./node_modules/primeicons/primeicons.css",
+  //   //...
+  // ],
 })
 export class AppComponent {
+
+  today = new Date();
 
 
   val: string = ''; 
