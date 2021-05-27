@@ -36,11 +36,21 @@
 
 <h5>Default</h5>
 
-  <div class="p-field p-col-12 p-md-4">
-        <label for="basic">Basic</label>
-        <p-calendar inputId="basic" [(ngModel)]="today"></p-calendar>
-  </div>
+    <div class="p-field p-col-12 p-md-4">
+        <label for="icon">Icon</label>
+        <p-calendar [(ngModel)]="today" [showIcon]="true" inputId="icon"></p-calendar>
+    </div>
 
+<br> <br> <br>
+
+<h5>Float Label</h5>
+<span class="p-float-label">
+    <input id="float-input" type="text" pInputText [(ngModel)]="value2"> 
+    <label for="float-input">Username</label>
+</span>
+
+
+<br> <br>
 <button pButton type="button" label="Click" ></button>
 
 

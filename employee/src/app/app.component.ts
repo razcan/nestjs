@@ -10,16 +10,13 @@ import {MenuItem} from 'primeng/api';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
-  // "styles": [
-  //   "./node_modules/primeng/resources/themes/saga-blue/theme.css",
-  //   "./node_modules/primeng/resources/primeng.min.css",
-  //   "./node_modules/primeicons/primeicons.css",
-  //   //...
-  // ],
 })
 export class AppComponent {
 
   today = new Date();
+  date1: Date | undefined;
+  value1: any;
+  value2: any;
 
 
   val: string = ''; 

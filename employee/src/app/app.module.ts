@@ -9,6 +9,8 @@ import {ButtonModule} from 'primeng/button';
 import {TabViewModule} from 'primeng/tabview';
 import { CalendarModule } from 'primeng/calendar';
 import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
+import {InputTextModule} from 'primeng/inputtext';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import {AccordionModule} from 'primeng/accordion';     //accordion and accordion
   ],
   imports: [
     AccordionModule,
+    InputTextModule,
+    BrowserAnimationsModule,
     CalendarModule,
     EditorModule,
     ButtonModule,
