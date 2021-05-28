@@ -1,0 +1,26 @@
+<p>form-app works!</p>
+<p-dropdown [options]="books" [(ngModel)]="selectedBook" optionLabel="name"></p-dropdown>
+
+<div class="card">
+  <h5>Vertical and Grid</h5>
+  <div class="p-fluid p-formgrid p-grid">
+    <div class="p-field p-col">
+      <label for="firstname2">Firstname</label>
+      <input id="firstname2" type="text" pInputText />
+    </div>
+    <div class="p-field p-col">
+      <label for="lastname2">Lastname</label>
+      <input id="lastname2" type="text" pInputText />
+    </div>
+  </div>
+</div>
+
+  <div class="p-field-checkbox">
+    <p-checkbox
+      name="code"
+      code="Chicago"
+      [(ngModel)]="states"
+      inputId="code"
+    ></p-checkbox>
+    <label for="code">Chicago</label>
+  </div>

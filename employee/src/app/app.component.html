@@ -1,5 +1,5 @@
-<!-- Toolbar -->
-<div class="toolbar" role="banner">
+
+    <div class="toolbar" role="banner">
   <img
     width="40"
     alt="Angular Logo"
@@ -34,14 +34,11 @@
   </li>
 </div>
 
-<h5>Default</h5>
-
     <div class="p-field p-col-12 p-md-4">
         <label for="icon">Icon</label>
         <p-calendar [(ngModel)]="today" [showIcon]="true" inputId="icon"></p-calendar>
     </div>
 
-<br> <br> <br>
 
 <h5>Float Label</h5>
 <span class="p-float-label">
@@ -52,6 +49,23 @@
 
 <br> <br>
 <button pButton type="button" label="Click" ></button>
+
+
+<h5>Responsive</h5>
+<div class="p-grid">
+    <div class="p-col-12 p-md-6 p-lg-3">
+        <div class="box">p-col-12 p-md-6 p-lg-3</div>
+    </div>
+    <div class="p-col-12 p-md-6 p-lg-3">
+        <div class="box">p-col-12 p-md-6 p-lg-3</div>
+    </div>
+    <div class="p-col-12 p-md-6 p-lg-3">
+        <div class="box">p-col-12 p-md-6 p-lg-3</div>
+    </div>
+    <div class="p-col-12 p-md-6 p-lg-3">
+        <div class="box">p-col-12 p-md-6 p-lg-3</div>
+    </div>
+</div>
 
 
 <router-outlet></router-outlet>

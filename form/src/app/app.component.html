@@ -1,0 +1,48 @@
+<div class="card">
+  <h5>Vertical</h5>
+  <div class="p-fluid">
+    <div class="p-field">
+      <label for="firstname1">Firstname</label>
+      <input id="firstname1" type="text" pInputText />
+    </div>
+    <div class="p-field">
+      <label for="lastname1">Lastname</label>
+      <input id="lastname1" type="text" pInputText />
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h5>Vertical and Grid</h5>
+  <div class="p-fluid p-formgrid p-grid">
+    <div class="p-field p-col">
+      <label for="firstname2">Firstname</label>
+      <input id="firstname2" type="text" pInputText />
+    </div>
+    <div class="p-field p-col">
+      <label for="lastname2">Lastname</label>
+      <input id="lastname2" type="text" pInputText />
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h5>Horizontal and Fixed Width</h5>
+  <div class="p-field p-grid">
+    <label for="firstname3" class="p-col-fixed" style="width:100px"
+      >Firstname</label
+    >
+    <div class="p-col">
+      <input id="firstname3" type="text" pInputText />
+    </div>
+  </div>
+  <div class="p-field p-grid">
+    <label for="lastname3" class="p-col-fixed" style="width:100px"
+      >Lastname</label
+    >
+    <div class="p-col">
+      <input id="lastname3" type="text" pInputText />
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
