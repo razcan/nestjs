@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms';
 
 interface Book {
   name: string;
@@ -11,6 +12,12 @@ interface Book {
   styleUrls: ['./form-app.component.scss']
 })
 export class FormAppComponent implements OnInit {
+
+  onSubmit(f: NgForm) {
+    console.log(f.value);  // { first: '', last: '' }
+    console.log(f.valid);  // false
+  }
+  
 
   books: Book[];
   selectedBook: string | undefined;
@@ -43,6 +50,10 @@ export class FormAppComponent implements OnInit {
    city1:any = null;
 
    city2:any = null;
+
+   city5:any = null;
+
+   city6:any = null;
 
   ngOnInit() {
      }

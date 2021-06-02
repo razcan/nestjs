@@ -24,3 +24,44 @@
     ></p-checkbox>
     <label for="code">Chicago</label>
   </div>
+
+  
+  <div class="card">
+  <h5>Vertical RadioButton</h5>
+  <div class="p-field-radiobutton">
+    <p-radioButton
+      name="city5"
+      value="Chicago"
+      [(ngModel)]="city1"
+      inputId="city5"
+    ></p-radioButton>
+    <label for="city5">Chicago</label>
+  </div>
+  <div class="p-field-radiobutton">
+    <p-radioButton
+      name="city6"
+      value="Los Angeles"
+      [(ngModel)]="city1"
+      inputId="city6"
+    ></p-radioButton>
+    <label for="city6">Los Angeles</label>
+  </div>
+
+  <div class="p-field p-col-12 p-md-4">
+        <input type="text" id="inputtext" pInputText class="ng-invalid ng-dirty" placeholder="InputText"> 
+  </div>
+
+ <h3 *ngIf="city1"> Selected {{city1}} </h3>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+      <input name="first" ngModel required #first="ngModel">
+      <input name="last" ngModel>
+      <button>Submit</button>
+    </form>
+
+    <p>First name value: {{ first.value }}</p>
+    <p>First name valid: {{ first.valid }}</p>
+    <p>Form value: {{ f.value | json }}</p>
+    <p>Form valid: {{ f.valid }}</p>
+
+

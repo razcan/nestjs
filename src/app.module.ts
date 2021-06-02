@@ -10,9 +10,17 @@ import { EmployeeService } from './employee/employee.service';
 import { ScheduleModule } from '@nestjs/schedule';
 // import {EmployeeRepository} from './employee/employee.repository';
 import { CronService } from './cron/cron.service';
+import { FileUploadController } from './file-upload/file-upload.controller';
+import { MulterModule } from '@nestjs/platform-express';
+import { diskStorage } from 'multer';
 
 @Module({
   imports: [
+    MulterModule.registerAsync({
+      useFactory: () => ({
+        dest: './upload',
+      }),
+    }),
     HttpModule,
     ScheduleModule.forRoot(),
     TypeOrmModule.forRoot({
@@ -37,6 +45,7 @@ import { CronService } from './cron/cron.service';
     }),
     EmployeeModule,
   ],
+  controllers: [FileUploadController],
   // providers: [CronService],
   // controllers: [AppController, EmployeeController],
   // providers: [AppService, EmployeeService],
